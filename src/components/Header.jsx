@@ -24,11 +24,7 @@ export default function Header() {
             alt="Fogão do Meu Coração"
             width={140}
             height={50}
-            style={{
-              width: "100%",
-              height: "auto",
-              filter: "drop-shadow(0 2px 8px #0008)",
-            }}
+            style={{ filter: "drop-shadow(0 2px 8px #0008)" }}
             priority
           />
         </LogoWrapper>
