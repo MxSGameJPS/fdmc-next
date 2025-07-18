@@ -1,5 +1,6 @@
 "use client";
 import styled from "styled-components";
+import Image from "next/image";
 import {
   FaInstagram,
   FaNewspaper,
@@ -17,7 +18,20 @@ export default function Header() {
     <HeaderContainer>
       <HeaderBg />
       <HeaderContent>
-        <Logo src={"/image/logoBranca.png"} alt="Fogão do Meu Coração" />
+        <LogoWrapper>
+          <Image
+            src="/image/logoBranca.png"
+            alt="Fogão do Meu Coração"
+            width={140}
+            height={50}
+            style={{
+              width: "100%",
+              height: "auto",
+              filter: "drop-shadow(0 2px 8px #0008)",
+            }}
+            priority
+          />
+        </LogoWrapper>
         <Hamburger
           aria-label="Abrir menu"
           onClick={() => setMenuOpen((v) => !v)}
@@ -100,11 +114,9 @@ const HeaderContent = styled.div`
   }
 `;
 
-const Logo = styled.img`
+const LogoWrapper = styled.div`
   width: 140px;
   margin-bottom: 0;
-  filter: drop-shadow(0 2px 8px #0008);
-
   @media (max-width: 768px) {
     width: 110px;
   }
