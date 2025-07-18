@@ -22,9 +22,11 @@ export default function Header() {
           <Image
             src="/image/logoBranca.png"
             alt="Fogão do Meu Coração"
-            width={140}
-            height={50}
-            style={{ filter: "drop-shadow(0 2px 8px #0008)" }}
+            fill
+            style={{
+              objectFit: "contain",
+              filter: "drop-shadow(0 2px 8px #0008)",
+            }}
             priority
           />
         </LogoWrapper>
@@ -111,13 +113,17 @@ const HeaderContent = styled.div`
 `;
 
 const LogoWrapper = styled.div`
+  position: relative;
   width: 140px;
+  height: 50px;
   margin-bottom: 0;
   @media (max-width: 768px) {
     width: 110px;
+    height: 40px;
   }
   @media (max-width: 600px) {
     width: 90px;
+    height: 32px;
   }
 `;
 
